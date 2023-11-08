@@ -5,8 +5,8 @@
 package main // always starts with
 
 import (
-	"fmt" // contains all the basic functions
-	//"myproject/simplecalc" // error in linking shows not in the src directory  package myproject/simplecalc is not in std (C:\Program Files\Go\src\myproject\simplecalc)
+	"fmt"                  // contains all the basic functions
+	"myproject/simplecalc" // error in linking shows not in the src directory  package myproject/simplecalc is not in std (C:\Program Files\Go\src\myproject\simplecalc)
 )
 
 // structure to be declared always before main
@@ -22,10 +22,10 @@ type Book struct {
 }
 
 func main() {
-	//a, b := 12, 3 // variable declaratrion
-	//fmt.Println(simplecalc.Add(a, b))
+	a, b := 12, 3 // variable declaratrion
+	fmt.Println(simplecalc.Add(a, b))
 	//fmt.Println(simplecalc.Sub(a, b))
-	//fmt.Println(simplecalc.Mul(a, b))
+	fmt.Println(simplecalc.Mul(a, b))
 
 	fmt.Println("Hello") // function always start with capital EX: Println, Add
 
@@ -135,12 +135,12 @@ func main() {
 	}
 	fmt.Println(names)
 
-	a := names[0:2]
-	b := names[1:3]
-	fmt.Println(a, b)
-	b[0] = "XXX" // the update in b also reflects the changes in names i.e paul is change to xxx
-	fmt.Println(a, b)
-	fmt.Println(names)
+	// a := names[0:2]
+	// b := names[1:3]
+	// fmt.Println(a, b)
+	// b[0] = "XXX" // the update in b also reflects the changes in names i.e paul is change to xxx
+	// fmt.Println(a, b)
+	// fmt.Println(names)
 
 	// Maps : it store data in key value pair. Every key is unique
 
