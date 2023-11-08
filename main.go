@@ -5,8 +5,11 @@
 package main // always starts with
 
 import (
-	"fmt"                  // contains all the basic functions
-	"myproject/simplecalc" // error in linking shows not in the src directory  package myproject/simplecalc is not in std (C:\Program Files\Go\src\myproject\simplecalc)
+	"fmt" // contains all the basic functions
+	"myproject/Swit"
+	"myproject/forloop"
+	"myproject/ifelse"
+	"myproject/simplecalc"
 )
 
 // structure to be declared always before main
@@ -23,52 +26,18 @@ type Book struct {
 
 func main() {
 	a, b := 12, 3 // variable declaratrion
+	j := 5
+	k := 5
+	day := 3
+
 	fmt.Println(simplecalc.Add(a, b))
-	//fmt.Println(simplecalc.Sub(a, b))
+	fmt.Println(simplecalc.Sub(a, b))
 	fmt.Println(simplecalc.Mul(a, b))
+	fmt.Println(forloop.L1(j))
+	fmt.Println(ifelse.E1(k))
+	fmt.Println(Swit.S1(day))
 
 	fmt.Println("Hello") // function always start with capital EX: Println, Add
-
-	//2nd class
-
-	// for i:=1; i<10; i++{    //for loop there is no precrement like ++i
-
-	// 	fmt.Println("Hello")
-
-	// }
-	// another way of declaring of forloop similar to while loop
-	// j:=0
-	// for j<10 {
-	// 	j=j+1
-	// 	fmt.Println(j)
-	// }
-	/*infinite loop
-	//for{
-		//fmt.Println("hi")
-	}*/
-
-	// if else statement
-	//other way if k:=5; num%2==0
-	k := 5
-	if k%2 == 0 {
-		fmt.Println("even")
-	} else {
-		fmt.Println("odd")
-	}
-
-	//switch statement: no need to specify the break statement unlinke in C lang
-	day := 3
-	switch day {
-	case 1:
-		fmt.Println("Monday")
-	case 2:
-		fmt.Println("Tuesday")
-	case 3:
-		fmt.Println("Wednesday")
-	default:
-		fmt.Println("Invalid Number")
-	}
-
 	//defer is used so that it can be done later
 	defer fmt.Println("second")
 	defer fmt.Println("third")
